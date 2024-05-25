@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fireworks in Stadium</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    
+    <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+   
+</head>
+
+<body>
+    <a-scene id="scene">
+
+        <a-assets>
+            <a-asset-item id="stadiumModel" src="./assets/stadium/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity position="0 4 0 " spe-particles="        
+        color: yellow, red, cyan, black; 
+        distribution: sphere; 
+        randomize-velocity: true;
+        radius: 1; 
+        particle-count: 800; 
+        velocity: 1; 
+        velocity-spread: 15; 
+        drag: 1; 
+        max-age: 2;
+        duration: -1,
+        blending: additive;
+        active-multiplier: 1000; 
+        size: 1, 1, 1, 0">
+        </a-entity>
+
+        <a-entity position="-10 11 0 " spe-particles="        
+        color: cyan, green, red, black; 
+        distribution: sphere; 
+        randomize-velocity: true;
+        radius: 1; 
+        particle-count: 800; 
+        velocity: 1; 
+        velocity-spread: 15; 
+        drag: 1; 
+        max-age: 2;
+        duration: -1,
+        blending: additive;
+        active-multiplier: 1000; 
+        size: 1, 1, 1, 0">
+        </a-entity>
+
+        <a-entity position="10 13 0 " spe-particles="        
+        color: orange, pink, green, black; 
+        distribution: sphere; 
+        randomize-velocity: true;
+        radius: 1; 
+        particle-count: 800; 
+        velocity: 1; 
+        velocity-spread: 15; 
+        drag: 1; 
+        max-age: 2;
+        duration: -1,
+        blending: additive;
+        active-multiplier: 1000; 
+        size: 1, 1, 1, 0">
+        </a-entity>
+
+        <a-entity position="21 11 0 " spe-particles="        
+        color: yellow, cyan, purple, black; 
+        distribution: sphere; 
+        randomize-velocity: true;
+        radius: 1; 
+        particle-count: 800; 
+        velocity: 1; 
+        velocity-spread: 15; 
+        drag: 1; 
+        max-age: 2;
+        duration: -1,
+        blending: additive;
+        active-multiplier: 1000; 
+        size: 1, 1, 1, 0">
+        </a-entity>
+
+        <a-entity id="stadium" rotation="0 90 0" gltf-model="#stadiumModel" position="-2 -0.9 25.25"
+            scale="1 1 1">
+        </a-entity>
+
+        <a-sky color="#000000"></a-sky>
+        <a-camera position="0 0 30"></a-camera>
+    </a-scene>
+</body>
+
+</html>
